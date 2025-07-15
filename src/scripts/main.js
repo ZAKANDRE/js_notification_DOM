@@ -1,6 +1,6 @@
 const pushNotification = (posTop, posRight, title, description, type) => {
   const blockType = document.createElement('section');
-
+  blockType.style.position = `absolute`;
   blockType.style.top = `${posTop}px`;
   blockType.style.right = `${posRight}px`;
   blockType.classList.add(`notification`);
