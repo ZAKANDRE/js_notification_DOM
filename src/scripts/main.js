@@ -1,5 +1,6 @@
 const pushNotification = (posTop, posRight, title, description, type) => {
   const blockType = document.createElement('section');
+
   blockType.style.position = `absolute`;
   blockType.style.top = `${posTop}px`;
   blockType.style.right = `${posRight}px`;
@@ -19,9 +20,9 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   descriptionP.textContent = description;
   blockType.append(descriptionP);
 
-  setTimeout(() => {
-    blockType.style.display = 'none';
-  }, 2000);
+  // setTimeout(() => {
+  //   blockType.style.display = 'none';
+  // }, 2000);
 };
 
 pushNotification(
