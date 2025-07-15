@@ -1,7 +1,6 @@
-
 const pushNotification = (posTop, posRight, title, description, type) => {
+  const blockType = document.createElement('section');
 
-  let blockType = document.createElement('section');
   blockType.style.top = `${posTop}px`;
   blockType.style.right = `${posRight}px`;
   blockType.classList.add(`notification`);
@@ -9,16 +8,19 @@ const pushNotification = (posTop, posRight, title, description, type) => {
 
   document.querySelector('body').append(blockType);
 
-  let titleH2 = document.createElement("h2");
-  titleH2.classList.add("title");
+  const titleH2 = document.createElement('h2');
+
+  titleH2.classList.add('title');
   titleH2.textContent = title;
   blockType.append(titleH2);
 
-  let descriptionP = document.createElement("p");
+  const descriptionP = document.createElement('p');
+
   descriptionP.textContent = description;
   blockType.append(descriptionP);
+
   setTimeout(() => {
-  blockType.style.display = 'none';
+    blockType.style.display = 'none';
   }, 2000);
 };
 
